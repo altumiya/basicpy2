@@ -1,0 +1,11 @@
+l=[10,20, 33,45,56,76,89]
+print(l[0:5])
+print(l[-1::-2])
+l.pop(1)
+print(l)
+l.insert(2,40)
+print(l)
+l.append(66)
+print(l)
+l.extend([90,94,95])
+print(l)
