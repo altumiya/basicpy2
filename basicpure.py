@@ -11,9 +11,9 @@ print(None, type(None))  # NoneType (None / Null)
 def seat(n):
     print(n)
 
-seat(4)
-seat("hello world")
-seat(float(3.14)) 
+seat(4) #4
+seat("hello world") #hello world
+seat(float(3.14)) # 3.14
 
 # from filename import function name above example 
 
