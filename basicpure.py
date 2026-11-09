@@ -48,3 +48,13 @@ print(b)  # 20
 # Integers are immutable in Python.
 
 #When you write b = 20, you aren't changing the integer 10 into 20. You're reassigning b to refer to the integer object  #representing 20.
+
+# example of string immutability 
+username = "altumiya"
+print(len(username))
+
+print(username[0])  # a
+print(username[-2]) # in reverse order i.e. y
+print(username[1:5]) #ltum 1 index to 4th index no 5th index
+username[0] = u
+print(username)  # error as string is immutable
