@@ -58,3 +58,26 @@ print(username[-2]) # in reverse order i.e. y
 print(username[1:5]) #ltum 1 index to 4th index no 5th index
 username[0] = u
 print(username)  # error as string is immutable
+
+# data type are stored in memory not in variable that's why memory have data type 
+
+a = 20
+a = "altumiya"
+a = 3.12
+print(a) # 3.12
+
+a = [1, 2, 3]
+b = a
+
+print(a is b)  # True
+
+a.append(4)
+
+print(a)       # [1, 2, 3, 4]
+print(b)       # [1, 2, 3, 4]
+
+a = [7, 8, 9]
+
+print(a)       # [7, 8, 9]
+print(b)       # [1, 2, 3, 4]
+print(a is b)  # False  
