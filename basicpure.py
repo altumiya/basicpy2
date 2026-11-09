@@ -5,3 +5,16 @@ print(2 + 3j, type(2 + 3j))  # complex (Complex number)
 print("Hello", type("Hello"))  # str (String)
 print(True, type(True))  # bool (Boolean)
 print(None, type(None))  # NoneType (None / Null)
+
+# indentation example
+
+def seat(n):
+    print(n)
+
+seat(4)
+seat("hello world")
+seat(float(3.14)) 
+
+# from filename import function name above example 
+
+# "seat" * 4 when run on shell it will give 'seatseatseatseat'
