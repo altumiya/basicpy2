@@ -13,3 +13,8 @@ a2 = "Hello\nWorld"  #\n represents a newline character.
 
 print(a2) # hello  world
 print(repr(a2)) # '"Hello\nWorld"'  This makes repr() useful for debugging.
+
+a3 = "hello\nworld"
+
+print(str(a3))  # hello # world
+print(repr(a3)) #hello\world
