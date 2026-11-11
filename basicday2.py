@@ -31,3 +31,13 @@ print(h2) #[1, 2, 3]
 
 h2 = copy.copy(h1)  #copy.deepcopy for nested list
 print(h2) #[55,2,3]
+
+# is example
+
+m = [1,2,3]
+n = m
+print(m) # [1,2,3]
+print(n) # [1,2,3]
+print( m == n) #true
+m = [1,2,3]
+print(m is n) #False as is compares identity
