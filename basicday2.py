@@ -20,3 +20,14 @@ for i in range(len(arr1)):
     unique = unique ^ arr12[i]
 
 print(unique)  # 4
+
+# slicing copy refer
+import copy
+h1 = [1,2,3]
+h2 = h1[:] # slicing make copy and then refer 
+h1[0]= 55
+print(h1) #[55, 2, 3]
+print(h2) #[1, 2, 3]
+
+h2 = copy.copy(h1)  #copy.deepcopy for nested list
+print(h2) #[55,2,3]
