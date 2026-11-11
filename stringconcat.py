@@ -18,3 +18,10 @@ a3 = "hello\nworld"
 
 print(str(a3))  # hello # world
 print(repr(a3)) #hello\world
+
+a4 = "123"
+
+print(a4) # 123
+print(repr(a4)) # '123'
+print(type(a4)) # <class 'str'>
+print(type(repr(a4))) # <class 'str'>
