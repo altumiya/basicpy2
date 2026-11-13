@@ -34,3 +34,8 @@ print(int('10000', 2))#16
 # bit operator
 x = 1
 print(x<<2) # 4
+
+import random
+
+print(random.random()) #<built-in method random of Random object at 0x3e638890> 0.7522782583420864
+print(random.randint(1,10)) # give random int from 1 to 10
