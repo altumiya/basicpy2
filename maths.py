@@ -17,3 +17,15 @@ b = 2
 c = 1j
 print(b+c) #(2+1j)
 print((2+1j)* 3) #(6+3j)
+
+print(0o20) #16  #octal number 
+print(0xff) #255 hexal
+print(0b1000) #8 binary
+
+print(oct(64)) #0o100
+print(hex(64)) #0x40
+print(bin(64)) #0b1000000
+
+print(int('64', 8)) #52
+print(int('64', 16 )) #100
+print(int('10000', 2))#16
