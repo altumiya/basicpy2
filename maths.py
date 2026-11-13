@@ -29,3 +29,8 @@ print(bin(64)) #0b1000000
 print(int('64', 8)) #52
 print(int('64', 16 )) #100
 print(int('10000', 2))#16
+
+
+# bit operator
+x = 1
+print(x<<2) # 4
