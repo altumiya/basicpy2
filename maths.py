@@ -54,3 +54,16 @@ print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1')) # 0.3
 print(0.1 + 0.1 + 0.1) #0.30000000000000004
 print(0.1 + 0.1 + 0.1 - 0.3) #5.551115123125783e-17 thats why we use decimal import
 print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')) #0.0
+
+#fractions
+
+from fractions import Fraction
+
+fra = Fraction(2,7)
+print(fra) # 2/7
+
+set1 = {1,2,3}
+set2 = set1 - {1,2,3}
+print(set2) #set() as empty() type is dictionary
+
+print(True is 1) #false
