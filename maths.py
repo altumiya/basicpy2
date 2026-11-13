@@ -39,3 +39,8 @@ import random
 
 print(random.random()) #<built-in method random of Random object at 0x3e638890> 0.7522782583420864
 print(random.randint(1,10)) # give random int from 1 to 10
+
+l1 = ['upper', 'middle', 'lower', 'sideupper', 'sidelower']
+print(random.choice(l1)) #randomly select from array eg. middle
+random.shuffle(l1) #shuffle the elements in array
+print(l1) #['middle', 'sideupper', 'upper', 'lower', 'sidelower']
