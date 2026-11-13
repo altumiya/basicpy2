@@ -44,3 +44,13 @@ l1 = ['upper', 'middle', 'lower', 'sideupper', 'sidelower']
 print(random.choice(l1)) #randomly select from array eg. middle
 random.shuffle(l1) #shuffle the elements in array
 print(l1) #['middle', 'sideupper', 'upper', 'lower', 'sidelower']
+
+#decimals
+
+from decimal import Decimal
+
+print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1')) # 0.3
+
+print(0.1 + 0.1 + 0.1) #0.30000000000000004
+print(0.1 + 0.1 + 0.1 - 0.3) #5.551115123125783e-17 thats why we use decimal import
+print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')) #0.0
