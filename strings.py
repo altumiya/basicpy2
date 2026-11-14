@@ -9,3 +9,5 @@ print(seat) #og immutable
 print(seat.find("upper")) # tell index 4
 print(seat.find("Upper")) # index -1 as U is not present
 
+seat2 = '   sidelower   '
+print(seat2.strip())  # space stipped off
