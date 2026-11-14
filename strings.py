@@ -14,3 +14,10 @@ print(seat2.strip())  # space stipped off
 
 seat3 = "upper , lower , middle, sideupper, sidelower"
 print(seat3.split(", ")) # from string to list ['upper ', 'lower ', 'middle', 'sideupper', 'sidelower']
+
+# formatting
+seatname = "sidelower"
+seatno = 34
+order = "i booked seat number {} which is {}" 
+print(order.format(seatno, seatname)) # i booked seat number 34 which is sidelower
+print("lower" in seatname) #True
