@@ -11,3 +11,6 @@ print(seat.find("Upper")) # index -1 as U is not present
 
 seat2 = '   sidelower   '
 print(seat2.strip())  # space stipped off
+
+seat3 = "upper , lower , middle, sideupper, sidelower"
+print(seat3.split(", ")) # from string to list ['upper ', 'lower ', 'middle', 'sideupper', 'sidelower']
