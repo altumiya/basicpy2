@@ -14,3 +14,13 @@ print()
 for seat in seatdict:
     print(seat, seatdict[seat]) #give keys and their values
 print()
+
+
+for key, value in seatdict.items():
+    print(key,value)   #give keys and their values
+print()    
+
+if "middle" in seatdict:
+    print("seat present") # this runs
+else:
+    print("no such seats")    
