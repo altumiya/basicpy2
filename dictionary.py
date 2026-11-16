@@ -37,3 +37,12 @@ print(seatdict) #{'upper': 'sideupper', 'middle': 'exact'} last item removed
 
 del seatdict["middle"]
 print(seatdict) #{'upper': 'sideupper'}
+
+seattype ={
+    "thirdac" : {"upper": "side" , "middle" : "exact", "lower" : "main"},
+    "secondac" : {"upper": "side" , "lower" : "main"}
+}
+print(seattype) #{'thirdac': {'upper': 'side', 'middle': 'exact', 'lower': 'main'}, 'secondac': {'upper': 'side', 'lower': 'main'}}
+
+print(seattype["secondac"]) #{'upper': 'side', 'lower': 'main'}
+print(seattype["secondac"]["lower"]) #main
