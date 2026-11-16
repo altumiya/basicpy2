@@ -66,3 +66,16 @@ seatvar1_ref.append('side-lower')
 print(seatvar1)      # ['upper', 'middle', 'lower', 'side-lower']  <- Mutated!
 print(seatvar1_ref)  # ['upper', 'middle', 'lower', 'side-lower']
 print(seatvar1 is seatvar1_ref)  # True (same memory address)
+
+#list comprehension
+#creating a new list from an existing iterable
+#[expression for item in iterable if condition]
+##for item in iterable: The loop through elements.
+
+#if condition (optional): Filter to keep only matching elements.
+
+squnums = [x**2 for x in range(11)]
+print(squnums) #[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+cunums = [y**3 for y in range(5)]
+print(cunums) #[0, 1, 8, 27, 64]
