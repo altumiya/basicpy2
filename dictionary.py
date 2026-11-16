@@ -10,3 +10,7 @@ print(len(seatdict)) # 3 as three key-value pairs or 3 items are in dictonary
 for seat in seatdict:
     print(seat) #give keys
 print()
+
+for seat in seatdict:
+    print(seat, seatdict[seat]) #give keys and their values
+print()
