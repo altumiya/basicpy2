@@ -53,3 +53,13 @@ squnum.clear()
 print(squnum)  # {}
 
 print(squnum.clear()) #None
+
+
+keys = ["1stac" , "2ndac", "3rdac"]
+default = "sidelower"
+
+newdict = dict.fromkeys(keys, default)
+print(newdict) #{'1stac': 'sidelower', '2ndac': 'sidelower', '3rdac': 'sidelower'}
+
+newdict = dict.fromkeys(keys, keys)
+print(newdict) #{'1stac': ['1stac', '2ndac', '3rdac'], '2ndac': ['1stac', '2ndac', '3rdac'], '3rdac': ['1stac', '2ndac', '3rdac']}
