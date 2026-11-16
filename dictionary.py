@@ -24,3 +24,10 @@ if "middle" in seatdict:
     print("seat present") # this runs
 else:
     print("no such seats")    
+
+seatdict["general"] = "sleeper"    
+print(seatdict) #{'upper': 'sideupper', 'middle': 'exact', 'lower': 'main', 'general': 'sleeper'}
+
+seatdict.pop("lower") #{'upper': 'sideupper', 'middle': 'exact', 'general': 'sleeper'} condition
+ 
+print(seatdict)    
