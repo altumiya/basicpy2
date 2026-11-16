@@ -30,4 +30,10 @@ print(seatdict) #{'upper': 'sideupper', 'middle': 'exact', 'lower': 'main', 'gen
 
 seatdict.pop("lower") #{'upper': 'sideupper', 'middle': 'exact', 'general': 'sleeper'} condition
  
-print(seatdict)    
+print(seatdict)
+
+seatdict.popitem()
+print(seatdict) #{'upper': 'sideupper', 'middle': 'exact'} last item removed
+
+del seatdict["middle"]
+print(seatdict) #{'upper': 'sideupper'}
