@@ -18,3 +18,51 @@ print(seatvar) #['upper', 'middle', 'sidelower']
 
 seatvar[1:2] = "sideupper"
 print(seatvar) #['upper', 's', 'i', 'd', 'e', 'u', 'p', 'p', 'e', 'r', 'sidelower']
+
+seatvar1 = ['upper' ,"middle" , '''lower''']
+seatvar1[1:2] = ["sideupper"]
+print(seatvar1) #['upper', 'sideupper', 'lower']
+print(seatvar1[1:1]) #[]
+seatvar1[1:1] = ["test", "test"]
+print(seatvar1) #['upper', 'test', 'test', 'sideupper', 'lower']
+seatvar1[1:3] = []
+print(seatvar1) # remove items i.e test test so result is ['upper', 'sideupper', 'lower']
+for seat in seatvar1:
+    print(seat , end="-") # upper-sideupper-lower-
+print()
+
+   
+seatvar1.append("sidelower")
+print(seatvar1) #['upper', 'sideupper', 'lower', 'sidelower']
+if "sidelowe" in seatvar1:
+    print("sidelower is present") #if not present is shows nothing 
+else:
+    print("no such seats")    # this will run
+print()    
+
+seatvar1.pop()
+print(seatvar1) #['upper', 'sideupper', 'lower']
+
+seatvar1.remove("upper")
+print(seatvar1) #['sideupper', 'lower']
+
+seatvar1.insert(1,"upper")
+print(seatvar1) #['sideupper', 'upper', 'lower']
+
+#seatvar1.copy() creates a shallow copy—a new outer list in a different memory location—rather than a shared reference (=).
+
+seatvar1_copy = seatvar1.copy()
+
+seatvar1_copy.append('side-lower')
+
+print(seatvar1)       # ['upper', 'middle', 'lower']              <- Untouched!
+print(seatvar1_copy)  # ['upper', 'middle', 'lower', 'side-lower']
+print(seatvar1 is seatvar1_copy)  # False (different objects in memory)
+
+seatvar1_ref = seatvar1
+
+seatvar1_ref.append('side-lower')
+
+print(seatvar1)      # ['upper', 'middle', 'lower', 'side-lower']  <- Mutated!
+print(seatvar1_ref)  # ['upper', 'middle', 'lower', 'side-lower']
+print(seatvar1 is seatvar1_ref)  # True (same memory address)
