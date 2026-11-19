@@ -125,3 +125,26 @@ def func3():
     a = 12
 func3()
 print(a)    # so a = 12 instead of 89 but not a good prax 
+
+#innerscope example
+
+b = 89
+
+def f1():
+    b = 56 # if this var is not present then b will be printed as 89 called as climbing
+    def f2():
+        print(b) # 56 
+    f2()
+f1()
+
+
+#closure example
+c = 89
+
+def f11():
+    c = 12
+    def f21():
+        print(c)
+    return f21
+myres = f11()
+myres() #12 
