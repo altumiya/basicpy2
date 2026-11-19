@@ -74,3 +74,19 @@ def print_user_info(**kwargs):
         print(f"  {key}: {value}")  #  name: Altaf role: Developer city: Mumbai
 
 print_user_info(name="Altaf", role="Developer", city="Mumbai")
+
+# generator function with yield method
+def evengen(limit):
+    for i in range(2, limit + 1, 2):
+        yield i #yield pause execution of fn and save the  fn in local state
+print(evengen(10)) #2 <generator object evengen at 0x6f75788de00> due to yield it will be random alphanumeric
+for num in evengen(10):
+    print(num) # 2 4 6 8 10
+
+#recursive function  or exit function
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial (4))  #24    
