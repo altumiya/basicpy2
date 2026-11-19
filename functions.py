@@ -49,3 +49,28 @@ print(greet()) #hello,user!
 
 cube = lambda a:a**3
 print(cube(4)) #64
+
+#functions with *args  * allows a function to accept any number of positional arguments. class as tuples
+
+def add_all(*args):
+    print(f"Type: {type(args)}, Content: {args}")
+    for i in args:
+        print(i*2) #returns multiple values i.e. 2 4 6 8 10 15
+    return sum(args)
+
+# Call with 0, 2, or 5 arguments
+print(add_all())              # Type: <class 'tuple'>, Content: () -> Returns 0
+print(add_all(1, 2))          # Content: (1, 2) -> Returns 3
+print(add_all(1, 2, 3, 4, 5)) # Content: (1, 2, 3, 4, 5) -> Returns 15
+
+#function with **kwargs  ** allows a function to accept any number of named (keyword) arguments. in dictionary
+
+def print_user_info(**kwargs): 
+    print(f"Type: {type(kwargs)}") #Type: <class 'dict'>
+    print(f"Dictionary content: {kwargs}") # Dictionary content: {'name': 'Altaf', 'role': 'Developer', 'city': 'Mumbai'}
+
+    # Access just like a dictionary:
+    for key, value in kwargs.items():
+        print(f"  {key}: {value}")  #  name: Altaf role: Developer city: Mumbai
+
+print_user_info(name="Altaf", role="Developer", city="Mumbai")
