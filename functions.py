@@ -43,3 +43,9 @@ def greet(name = "user"):
     return "hello," + name + "!"
 print(greet("altaf"))   #hello,altaf!
 print(greet()) #hello,user!
+
+# lambda or anonymous functions
+# storing function in varialbe is called as lambda function
+
+cube = lambda a:a**3
+print(cube(4)) #64
