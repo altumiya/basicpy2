@@ -29,3 +29,17 @@ print(multiply(4,5))  #20
 #print(4,5) give 45 no error
 print(multiply('a', 5)) #aaaaa
 print(multiply(5,'a')) #aaaaa
+
+def circle(radius):
+    area = (math.pi * radius ** 2)
+    circum = (2 * math.pi * radius)
+    return area , circum
+a ,c = circle(4)  
+print("area: {:.2f} circumference: {:.2f}".format(a, c))  #50.27, 25.13 last 2 digit only
+
+# greeting default parameter
+
+def greet(name = "user"):
+    return "hello," + name + "!"
+print(greet("altaf"))   #hello,altaf!
+print(greet()) #hello,user!
