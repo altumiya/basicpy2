@@ -108,3 +108,20 @@ def func1():
     print(username1)
 print(username1)    # altimiya
 func1() # altumiya as no var in innerscope the fn finding it on global scope
+
+x = 99
+
+def func2(y):
+    z = x + y 
+    return z
+result = func2(1)   
+print(result)  #100
+
+
+a = 89
+
+def func3():
+    global a # due to this methods we make inner var global 
+    a = 12
+func3()
+print(a)    # so a = 12 instead of 89 but not a good prax 
