@@ -126,7 +126,7 @@ def func3():
 func3()
 print(a)    # so a = 12 instead of 89 but not a good prax 
 
-#innerscope example
+#innerscope example or chaining
 
 b = 89
 
@@ -148,3 +148,18 @@ def f11():
     return f21
 myres = f11()
 myres() #12 
+
+#factory functions that creates and returns a new object 
+# without using class or the new keyword.
+def seatselect(num):
+    def actual(x):
+        return x ** num
+    return actual 
+d = seatselect(2)
+e = seatselect(3)
+print(d(3)) #9
+print(e(3))    #27   
+
+f = seatselect(4)
+
+print(f(2)) #16
