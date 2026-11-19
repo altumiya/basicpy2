@@ -89,4 +89,22 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)
-print(factorial (4))  #24    
+print(factorial (4))  #24   
+
+#scopes and closures or name space
+
+username = "altumiya"
+
+def func():
+    username = "altaf"
+    print(username)
+print(username)    # altumiya due to global scope
+func() #altaf after calling the function due to block scope
+
+username1 = "altumiya"
+
+def func1():
+    #username1 = "altaf"
+    print(username1)
+print(username1)    # altimiya
+func1() # altumiya as no var in innerscope the fn finding it on global scope
