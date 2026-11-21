@@ -74,3 +74,15 @@ print(long_running_function(4, 3)) #7
 # 3. Second call (2, 3): found in cache_value, so it skips time.sleep(4) and returns 5 instantly.
 # 4. Call (4, 3): new input, so it waits 4 seconds and calculates 7 (only future calls with (4, 3) will be instant).
 # Note: Make sure to add 'import time' at the top so time.sleep(4) works.
+
+#The dictionary is created outside wrapper().
+#Therefore, it remains available between calls to the wrapper. The wrapper keeps access to that dictionary even after cache() has finished executing.
+#This is related to a Python concept called a closure.
+#If you created the dictionary inside wrapper(), it would be recreated on every call, and the cache would not work as intended.
+
+#enumerate method
+
+x = ('upper' ,"lower", 'middle')
+y = enumerate(x) # for making list enumerate returns pairs of (index, value)
+print(y) #<enumerate object at 0xedbd60bb0d10>
+print(list(y)) # [(0, 'upper'), (1, 'lower'), (2, 'middle')]
