@@ -13,3 +13,15 @@ print(car1.brand) #Honda
 print(car2.model) #Fortuner
 print(car3.brand,car3.model) # Tata Nexon
 print(car3) #<__main__.Cars object at 0xab205146ba0>
+
+#class method and self
+
+class Cars1:
+    def __init__(self,userbrand, usermodel):
+        self.brand = userbrand 
+        self.model = usermodel 
+    
+    def fullName(self):
+        return f"{self.brand} {self.model}"    
+myCars = Cars1("BMW" ,"I7")
+print(myCars.fullName()) # BMW I7
