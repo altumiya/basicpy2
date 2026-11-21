@@ -25,3 +25,22 @@ class Cars1:
         return f"{self.brand} {self.model}"    
 myCars = Cars1("BMW" ,"I7")
 print(myCars.fullName()) # BMW I7
+
+#inheritence
+
+class Cars2:
+    def __init__(self,userbrand, usermodel):
+        self.brand = userbrand 
+        self.model = usermodel 
+    
+    def fullName(self):
+        return f"{self.brand} {self.model}"  
+class ElectricV(Cars2):    
+    def __init__(self,userbrand ,usermodel, batterySize):
+        super().__init__(userbrand,usermodel)
+        self.batterySize = batterySize
+        
+Ev = ElectricV("Tesla", "Model X" ,"300kw")     
+print(Ev.fullName())   #Tesla Model X
+myCars = Cars2("BMW" ,"I7")
+print(myCars.fullName()) # BMW I7
