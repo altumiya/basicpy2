@@ -107,3 +107,22 @@ print(Ev.fuel_type())              # [POLYMORPHISM] Calls ElectricV's fuel_type 
 print(Cars3.total_cars)            # 2
 print(mycars3.general_description())  # Cars are means of transport
 print(mycars3.model)               # [ENCAPSULATION] Reading private __model via @property -> i7
+
+#static methods belongs to class than instance of object
+# class inheritence and isinstance 
+# multiple inheritence
+
+class Battery:
+    def battery_info(self):
+        return "This is battery"
+
+class Engine:
+    def engine_info(self):
+        return "This is engine"
+
+class ElectricCarTwo(Battery, Engine, Cars3):
+    pass
+
+newEv = ElectricCarTwo("Tesla", "Model X") 
+print(newEv.engine_info()) #This is engine
+print(newEv.battery_info()) # This is battery
