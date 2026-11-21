@@ -47,3 +47,30 @@ greet("do u like to have coffee", greeting="salam ") # 4 salam , do u like to ha
 # 1. @debug wraps the function inside wrapper, so calling hello() or greet() runs wrapper first.
 # 2. wrapper captures and prints the function name, *args, and **kwargs so you can inspect the inputs.
 # 3. After printing, it executes and returns the original function (func(*args, **kwargs)).
+
+#cache return function
+def cache(func):
+    cache_value = {}
+    print(cache_value) #{}
+    def wrapper(*args):
+        if args in cache_value:
+            return cache_value[args] #It checks whether the arguments already exist as a key in the dictionary.
+        result = func(*args)
+        cache_value[args] = result
+        return result
+    return wrapper
+
+@cache
+def long_running_function(a, b):
+    time.sleep(4)
+    return a + b
+
+print(long_running_function(2, 3)) #5
+print(long_running_function(2, 3)) #5 this is cache refrence it does not calculate again
+print(long_running_function(4, 3)) #7
+# How caching works here:
+# 1. cache_value = {} is created once when @cache decorates the function, storing past inputs (args) as keys and outputs as values.
+# 2. First call (2, 3): not in cache_value, so it waits 4 seconds, computes 5, and saves {(2, 3): 5}.
+# 3. Second call (2, 3): found in cache_value, so it skips time.sleep(4) and returns 5 instantly.
+# 4. Call (4, 3): new input, so it waits 4 seconds and calculates 7 (only future calls with (4, 3) will be instant).
+# Note: Make sure to add 'import time' at the top so time.sleep(4) works.
